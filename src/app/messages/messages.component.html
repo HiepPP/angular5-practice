@@ -1,0 +1,8 @@
+<div *ngIf="messageServie.message.length">
+  <h4>message</h4>
+  <button class="clear" 
+  (click) = "messageServie.deleteAllMessage()">Delete all message</button>
+  <div *ngFor="let message of messageServie.message">
+    {{message}}
+  </div>
+</div>

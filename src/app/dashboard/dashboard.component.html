@@ -1,0 +1,6 @@
+<h2>Top 4 movies</h2>
+<a *ngFor="let movie of movies" 
+routerLink="/detail/{{movie.id}}">
+  {{movie.name}}
+</a>
+

@@ -1,0 +1,17 @@
+<div *ngIf="phim" class="details">
+  <h3>Movie {{phim.name}} </h3>
+  <table style="width:100%">
+    <tr>
+      <td>name:</td>
+      <td>
+        <input [ngModel]="phim.name">
+      </td>
+    </tr>
+    <td>release year:</td>
+    <td>
+      <input [(ngModel)]="phim.releaseYear">
+    </td>
+  </table>
+</div>
+<button (click)= "save()">save</button>
+<button (click)= "goBack()">go back</button>
