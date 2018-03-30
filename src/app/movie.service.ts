@@ -66,4 +66,14 @@ export class MovieService {
     )
   }
 
+  searchMovie(typedString: string) {
+    if (!typedString.trim()) {
+      return of([])
+    }
+    return this.http.get<Movie[]>(`${this.url}?name_like=${typedString}`).pipe(
+      tap(foundedMovie => foundedMovie),
+      catchError(error => of([]))
+    )
+  }
+
 }
